@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Messages</title>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+	<script type="text/javascript" src="../javascript/checkAllCheckBoxes.js"></script>
+	<link href="../css/messageLabels.css" rel="stylesheet">
+	<!-- <link href="../navbar/userNavbar.html" rel="import"> -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+</head>
+
+<body>
+	<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-dark-grey" style="display:none; " id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close
+			<span style="align-content: right;">&times;</span>
+		</button>
+		<a href="#" class="w3-bar-item w3-button">Link 1</a>
+		<a href="#" class="w3-bar-item w3-button">Link 2</a>
+		<a href="#" class="w3-bar-item w3-button">Link 3</a>
+	</div>
+
+	<div id="main">
+
+
+
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<div class="col-sm-2">
+				<!--   Brand -->
+				<button id="openNav" class="w3-button  w3-xlarge w3-dark-grey" onclick="w3_open()">&#9776;</button>
+				<a class="navbar-brand" href="#">Logo</a>
+			</div>
+
+			<!--    Links -->
+			<div class="col-sm-9">
+				<ul class="navbar-nav justify-content-center">
+
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Notifications
+							<span class="badge">(5)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">See all messages</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Settings</a>
+					</li>
+
+
+			</div>
+
+
+			<!-- isos prepei na aferethei to sigkekrimeno button -->
+			<div class="col-sm-1">
+				<ul class="nav justify-content-end">
+					<form class="form-inline" action="/action_page.php">
+						<!-- <input class="form-control mr-sm-1" type="text" placeholder="Search"> -->
+						<input type="submit" class="btn btn-danger" value="Log out">
+					</form>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- messages -->
+		<div class="container-fluid">
+			<div class="col-sm-12">
+				<div class="card border-dark">
+					<div class="card-body ">
+						<div class="row">
+
+							<!-- plaino menu -->
+							<div class="col-sm-2">
+								<h3>Compose</h3>
+								<p>inbox </p>
+								<p>Sent</p>
+							</div>
+
+
+							<!-- Search an to xriastoume -->
+							<div class="col-sm-10">
+								<div class="row">
+									<div class="col-sm-12">
+										<form class="search" action="/action_page.php">
+											<input type="text" name="search" placeholder="Search..." />
+											<button id="searchbtn" type="button" class="btn btn-info">
+												Search
+											</button>
+										</form>
+									</div>
+								</div>
+								<!-- epilogi olon ton mails kai to refresh -->
+								<div class="row">
+									<div class="col-sm-*">
+
+										<!-- slide checkbox -->
+										<!-- <label class="switch">
+												<input type="checkbox">
+												<span class="slider round"></span>
+											</label> -->
+
+										<div class="custom-control form-control-lg custom-checkbox" style="margin-top: 1%;">
+											<input type="checkbox" class="custom-control-input" id="customCheckall">
+											<label class="custom-control-label" for="customCheckall">Select all</label>
+										</div>
+									</div>
+									<!-- gia na tsekarei ta pada koita sto javascript pou den douleuei akomi -->
+
+
+									<div class="col-sm-3">
+										<!-- refresh all the mails, mporei kai na ginei meso javascript event on click -->
+										<a href="#">
+											<button class="button">Reload</button>
+										</a>
+										<!-- 										
+										<button type="button" class="btn btn-info">
+											<a href="#">
+												<span class="glyphicon glyphicon-refresh">Refresh</span>
+											</a>
+										</button> -->
+
+									</div>
+								</div>
+
+
+
+
+
+
+								<!-- ola ta mails se lista .... -->
+								<!-- prepei na skeutoume an tha emfanizonte ola mazi h liga liga -->
+								<!-- sth parousa fasi einai na emfanizonte ola . -->
+								<!-- allios na mpoun tabs gia selides -->
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="table-responsive mailbox-messages">
+											<table class="table table-hover table-striped">
+												<tbody>
+													<tr>
+														<td>
+															<input type="checkbox">
+														</td>
+														<td class="mailbox-star">
+															<a href="#">
+																<i class="fa fa-star text-yellow"></i>
+															</a>
+														</td>
+														<td class="mailbox-name">
+															<a href="read-mail.html">Alexander Pierce</a>
+														</td>
+														<td class="mailbox-subject">
+															<b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+														</td>
+														<td class="mailbox-attachment"></td>
+														<td class="mailbox-date">5 mins ago</td>
+													</tr>
+													<tr>
+														<td>
+															<input type="checkbox">
+														</td>
+														<td class="mailbox-star">
+															<a href="#">
+																<i class="fa fa-star-o text-yellow"></i>
+															</a>
+														</td>
+														<td class="mailbox-name">
+															<a href="read-mail.html">Alexander Pierce</a>
+														</td>
+														<td class="mailbox-subject">
+															<b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+														</td>
+														<td class="mailbox-attachment">
+															<i class="fa fa-paperclip"></i>
+														</td>
+														<td class="mailbox-date">28 mins ago</td>
+													</tr>
+													<tr>
+														<td>
+															<input type="checkbox">
+														</td>
+														<td class="mailbox-star">
+															<a href="#">
+																<i class="fa fa-star-o text-yellow"></i>
+															</a>
+														</td>
+														<td class="mailbox-name">
+															<a href="read-mail.html">Alexander Pierce</a>
+														</td>
+														<td class="mailbox-subject">
+															<b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+														</td>
+														<td class="mailbox-attachment">
+															<i class="fa fa-paperclip"></i>
+														</td>
+														<td class="mailbox-date">35 mins ago</td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- /.table -->
+										</div>
+										<!-- /.mail-box-messages -->
+
+									</div>
+								</div>
+
+
+
+
+
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- footer -->
+				<div class="row">
+					<div class="col-sm-12" style="text-align: center">
+
+						<p style="color: white">Kataklida 2 !!!!</p>
+						<p style="color: white">&copy; 2017-2018</p>
+					</div>
+				</div>
+
+			</div>
+
+
+
+			<script>
+				function w3_open() {
+					document.getElementById("main").style.marginLeft = "10%";
+					document.getElementById("mySidebar").style.width = "10%";
+					document.getElementById("mySidebar").style.display = "block";
+					document.getElementById("openNav").style.display = 'none';
+				}
+				function w3_close() {
+					document.getElementById("main").style.marginLeft = "0%";
+					document.getElementById("mySidebar").style.display = "none";
+					document.getElementById("openNav").style.display = "inline-block";
+				}
+			</script>
+
+</body>
+
+</html>
