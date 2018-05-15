@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+
+<title>logIn</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="icon" href="./icons/loginIcon.png">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<!-- Custom styles for this template -->
+<link href="./css/indexLabels.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<!-- pou tha stilo to username kai password -->
+		<form class="form-signin" action="./jsp/verifyUsernamePassword.jsp" method="post">
+			<div class="text-center md-4">
+				<img class="md-4" src="./icons/loginIcon.png" alt="" width="72"
+					height="72">
+				<h3 class="h3 md-3 font-weight-normal">
+					Project 2<br>BootCamp 4<br>Java Steam
+				</h3>
+				<p>Please give your UserName and Password.</p>
+			</div>
+
+			<div class="form-label-group">
+				<input type="email" name="email" id="inputEmail" class="form-control"
+					placeholder="Email address" required autofocus> <label
+					for="inputEmail">Email address</label>
+			</div>
+
+			<div class="form-label-group">
+				<input type="password" name="password" id="inputPassword" class="form-control"
+					placeholder="Password" required autofocus> <label
+					for="inputPassword">Password</label>
+			</div>
+
+			<div class="checkbox md-3">
+				<label> <input type="checkbox" value="remember-me">
+					Remember me
+				</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
+				in</button>
+
+		</form>
+		<!-- metabasi sth selida gia register -->
+		<form class="form-signUp" action="./register/register.html">
+			<p class="mt-5 md-3 text-muted text-center">If you do not have a
+				account Sing Up here.</p>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Create
+				an account</button>
+		</form>
+		<p class="mt-5 md-3 text-muted text-center">&copy; 2017-2018</p>
+	</div>
+</body>
+
+</html>
