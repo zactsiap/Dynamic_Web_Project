@@ -83,7 +83,7 @@ body{
 	background: #494645;
 }
 
-button#searchbtn{
+button #searchbtn{
 	width: 10%;
 	margin-top: 0.005%;
 	margin-bottom: 0.005%;
