@@ -47,7 +47,7 @@
 					<span class="badge">(5)</span>
 			</a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="inboxMessage.html">Inbox</a></li>
+				href="inboxMessage.jsp">Inbox</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
 	</div>
 
