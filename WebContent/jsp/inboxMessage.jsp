@@ -107,14 +107,14 @@
 						<div id="messages">
 							<table>
 								<tr>
-									<th><input type="checkbox"></th>
+									<th><input class="checkAll" type="checkbox"></th>
 									<th>Username</th>
 									<th>Subject</th>
 									<th>Day</th>
 								</tr>
 
 								<tr>
-									<td><input type="checkbox"></td>
+									<td><input class="myCheckbox" type="checkbox"></td>
 									<td class='clickable-row' data-href='readMessage.jsp'>Alexander
 										Pierce</td>
 									<td class='clickable-row' data-href='readMessage.jsp'>Trying
