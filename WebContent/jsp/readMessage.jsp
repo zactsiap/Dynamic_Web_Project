@@ -36,19 +36,20 @@
 	<div class="col-sm-2">
 		<!--   Brand -->
 		<!-- <button id="openNav" class="w3-button  w3-xlarge w3-dark-grey" onclick="w3_open()">&#9776;</button> -->
-		<a class="navbar-brand" href="mainMenu.html">Logo</a>
+		<a class="navbar-brand" href="menu.jsp">Logo</a>
 	</div>
 
 	<!--    Links -->
 	<div class="col-sm-7">
 		<ul class="navbar-nav justify-content-center">
-			<li class="nav-item"><a class="nav-link" href="mainMenu.html">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Notifications
+			<li class="nav-item"><a class="nav-link" href="menu.jsp">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="inboxMessage.jsp">Notifications
 					<span class="badge">(5)</span>
 			</a></li>
 			<li class="nav-item"><a class="nav-link"
 				href="inboxMessage.jsp">Inbox</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+			</ul>
 	</div>
 
 
@@ -75,19 +76,19 @@
 							<a href="sendMessage.html">
 								<button id="newMessage" class="btn btn-danger">New
 									Message</button>
-							</a> <a href="sendMessage.html">
+							</a> <a href="inboxMessage.jsp">
 								<button id="inbox" class="btn btn-info">
 
 									<i class="fa fa-inbox"></i> Inbox
 
 								</button>
-							</a> <a href="sendMessage.html">
+							</a> <a href="sendMessage.jsp">
 								<button id="inbox" class="btn btn-info">
 
 									<i class="fa fa-rocket"></i> Sent
 
 								</button>
-							</a> <a href=""sendMessage.html"">
+							</a> <a href="sendMessage.jsp">
 								<button id="trash" class="btn btn-info">
 									<i class="fa fa-trash-o"></i> Trash
 								</button>
