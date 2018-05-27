@@ -1,3 +1,11 @@
-$(document).ready(function(){
-    $("#to, #cc, #bcc").select2({tags:["team@bm.com", "ceo@bm.com", "cto@bm.com"]});
+$(document).ready(function() {
+	
+	$('#message').keyup(function() {
+        var len = this.value.length;
+        if (len >= 250) {
+            this.value = this.value.substring(0, 250);
+        }
+        $('#charLeft').text(250 - len);
+    });
+
 });

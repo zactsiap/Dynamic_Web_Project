@@ -13,7 +13,6 @@
 <script type="text/javascript" src="../resources/js/sentMessage.js"></script>
 <title>Sent Message</title>
 
-
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="../resources/sendMessage.css" rel="stylesheet">
 <script type="text/javascript" src="../resources/sendMessage.js"></script>
@@ -115,8 +114,10 @@
 
 								<div class="col-sm-11">
 									<textarea class="form-control select2-offscreen" id="message"
-										name="body" rows="9" cols="9" placeholder="Type your Message"
-										tabindex="-1"></textarea>
+										maxlength="250" name="body" rows="9" cols="9"
+										placeholder="Type your Message" tabindex="-1"></textarea>
+									<br> (Maximum characters: 250)<br> <span id="charLeft">
+									</span> Characters left
 								</div>
 							</div>
 							<!-- </form> -->
@@ -181,6 +182,9 @@
 	<link href="https://select2.github.io/dist/css/select2.min.css"
 		rel="stylesheet">
 	<script src="https://select2.github.io/dist/js/select2.full.js"></script>
+	
+	 
+   
 
 </body>
 </html>
