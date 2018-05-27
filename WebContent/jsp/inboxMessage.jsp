@@ -67,7 +67,7 @@
 		<div class="col-sm-12">
 			<div class="row">
 				<div class="col-md-3">
-					<br> <br> <br>
+					<br> <br>
 					<div class="inbox-menu">
 						<div class="btn-group-vertical">
 							<a href="sendMessage.html">
@@ -109,11 +109,15 @@
 									<th>Subject</th>
 									<th>Day</th>
 								</tr>
+
 								<tr>
 									<td><input type="checkbox"></td>
-									<td>Alexander Pierce</td>
-									<td>Trying to find a solution to this problem...</td>
-									<td>5 mins ago</td>
+									<td class='clickable-row' data-href='readMessage.jsp'>Alexander
+										Pierce</td>
+									<td class='clickable-row' data-href='readMessage.jsp'>Trying
+										to find a solution to this problem...</td>
+									<td class='clickable-row' data-href='readMessage.jsp'>5
+										mins ago</td>
 								</tr>
 							</table>
 						</div>
