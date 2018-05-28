@@ -321,35 +321,31 @@ form.search::after {
 /************************************************************************************/
 
 /* table for messages */
-
 tr:nth-child(even) {
 	background-color: #b6b6b6;
-	
-} 
- 
+}
 
 table {
-    border-collapse:separate;
-    border:solid black 1px;
-    border-radius:6px;
-    -moz-border-radius:6px;
-    width: 100%;
+	border-collapse: separate;
+	border: solid black 1px;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	width: 100%;
 }
 
 td, th {
-    border-left:solid black 1px;
-    border-top:solid black 1px;
+	border-left: solid black 1px;
+	border-top: solid black 1px;
 }
 
 th {
-    background-color: #9b9b9b;
-    border-top: none;
+	background-color: #9b9b9b;
+	border-top: none;
 }
 
 td:first-child, th:first-child {
-     border-left: none;
+	border-left: none;
 }
-
 
 /************************************************************************************/
 /* buttons in the end  */
@@ -359,6 +355,25 @@ td:first-child, th:first-child {
 
 .btn a {
 	color: white;
+}
+
+#deleteAll {
+	width: 10%; 
+	text-align : center;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	text-align: center;
+}
+
+#deleteAll :hover {
+	color: white;
+	transition: 0.8s all;
+	background-color: #ff8040;
+	transition: 0.8s all;
+	/* 	 margin-left: 10%;
+	margin-right: 10%; */
+	border-radius: 10px;
 }
 
 /* ///////////////////////////////////////////////////////////////// */

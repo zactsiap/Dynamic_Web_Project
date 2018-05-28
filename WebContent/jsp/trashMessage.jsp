@@ -98,7 +98,7 @@
 				<div class="col-md-9">
 					<br>
 					<div class="col-sm-11">
-						<h5 class="text-center">Inbox</h5>
+						<h5 class="text-center">Trash Messages</h5>
 					</div>
 					<div class="col-sm-11">
 						

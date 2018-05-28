@@ -73,7 +73,7 @@
 					<br> <br>
 					<div class="inbox-menu">
 						<div class="btn-group-vertical">
-							<a href="sendMessage.jsp">
+							<a href="newMessage.jsp">
 								<button id="newMessage" class="btn btn-danger">New
 									Message</button>
 							</a> <a href="inboxMessage.jsp">

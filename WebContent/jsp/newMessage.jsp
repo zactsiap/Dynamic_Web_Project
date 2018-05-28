@@ -5,29 +5,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
 <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
-<title>Index</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-
-
-
+<script type="text/javascript" src="../resources/js/sentMessage.js"></script>
+<title>Sent Message</title>
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link href="../resources/inboxMessage.css" rel="stylesheet">
-<script type="text/javascript" src="../resources/inboxMessage.js"></script>
+<link href="../resources/sendMessage.css" rel="stylesheet">
+<script type="text/javascript" src="../resources/sendMessage.js"></script>
 
 </head>
-
 <body>
 
 	<header> <nav
@@ -54,7 +44,7 @@
 	<!-- isos prepei na aferethei to sigkekrimeno button -->
 	<div class="col-sm-3">
 		<ul class="nav justify-content-end">
-			<form class="form-inline" action="action_page.php">
+			<form class="form-inline" action="/action_page.php">
 				<!-- <input class="form-control mr-sm-1" type="text" placeholder="Search"> -->
 				<input type="submit" class="btn btn-danger" value="Log out">
 			</form>
@@ -67,72 +57,101 @@
 		<div class="col-sm-12">
 			<div class="row">
 				<div class="col-md-3">
-					<br> <br>
+					<br> <br> <br>
 					<div class="inbox-menu">
 						<div class="btn-group-vertical">
-							<a href="newMessage.jsp">
+							<!-- <a href="sendMessage.html">
 								<button id="newMessage" class="btn btn-danger">New
 									Message</button>
-							</a> <a href="inboxMessage.jsp">
+							</a> -->
+							<a href="inboxMessage.jsp">
 								<button id="inbox" class="btn btn-info">
 
 									<i class="fa fa-inbox"></i> Inbox
 
 								</button>
 							</a> <a href="sentMessage.jsp">
-								<button id="sent" class="btn btn-info">
+								<button id="inbox" class="btn btn-info">
 
 									<i class="fa fa-rocket"></i> Sent
 
 								</button>
-							</a>
-							<!-- na ginei page gia trash -->
-							<a href="trashMessage.jsp">
+							</a> <a href="trashMessage.jsp">
 								<button id="trash" class="btn btn-info">
+
 									<i class="fa fa-trash-o"></i> Trash
+
 								</button>
 							</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-9">
-					<br>
-					<div class="col-sm-11">
-						<h5 class="text-center">Inbox</h5>
-					</div>
-					<div class="col-sm-11">
-						
-						<div id="messages">
-						
-							<button  id="deleteAll" class="btn btn-danger" >Delete</button>
-							<br>
-							
-							<table>
-								<tr>
-									<th><input class="checkAll" type="checkbox"></th>
-									<th>Username</th>
-									<th>Subject</th>
-									<th>Day</th>
-								</tr>
-
-								<tr>
-									<td><input class="myCheckbox" type="checkbox"></td>
-									<td class='clickable-row' data-href='readMessage.jsp'>Alexander
-										Pierce</td>
-									<td class='clickable-row' data-href='readMessage.jsp'>Trying
-										to find a solution to this problem...</td>
-									<td class='clickable-row' data-href='readMessage.jsp'>5
-										mins ago</td>
-								</tr>
-							</table>
+					<div class="panel-body message">
+						<br>
+						<div class="col-sm-11">
+							<h6 class="text-center">New Message</h6>
 						</div>
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label for="to" class="col-sm-1 control-label">To:</label>
+								<div class="col-sm-11">
+									<input type="text" class="form-control select2-offscreen"
+										id="to" placeholder="Username">
+								</div>
+							</div>
 
+							<div class="form-group">
+								<label for="subject" class="col-sm-1 control-label">Subject:</label>
+								<div class="col-sm-11">
+									<input type="text" class="form-control select2-offscreen"
+										id="subject" placeholder="Subject">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="message" class="col-sm-1 control-label">Message:</label>
+
+								<div class="col-sm-11">
+									<textarea class="form-control select2-offscreen" id="message"
+										maxlength="250" name="body" rows="9" cols="9"
+										placeholder="Type your Message" tabindex="-1"></textarea>
+									<br> (Maximum characters: 250)<br> <span id="charLeft">
+									</span> Characters left
+								</div>
+							</div>
+							<!-- </form> -->
+
+							<div class="form-group">
+								<div class="col-sm-6">
+									<div class="btn-group ">
+										<button type="submit" class="btn btn-success">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
+										<!-- 		<button type="submit" class="btn btn-danger">Clean</button> -->
+									</div>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
+
+
+	<!-- <script>
+				function w3_open() {
+					document.getElementById("main").style.marginLeft = "10%";
+					document.getElementById("mySidebar").style.width = "10%";
+					document.getElementById("mySidebar").style.display = "block";
+					document.getElementById("openNav").style.display = 'none';
+				}
+				function w3_close() {
+					document.getElementById("main").style.marginLeft = "0%";
+					document.getElementById("mySidebar").style.display = "none";
+					document.getElementById("openNav").style.display = "inline-block";
+				}
+            </script> -->
+
 
 
 
@@ -163,5 +182,9 @@
 	<link href="https://select2.github.io/dist/css/select2.min.css"
 		rel="stylesheet">
 	<script src="https://select2.github.io/dist/js/select2.full.js"></script>
+	
+	 
+   
+
 </body>
 </html>
