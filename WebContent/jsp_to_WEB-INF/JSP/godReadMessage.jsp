@@ -11,15 +11,26 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<title>Read Message</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-<title>New Message</title>
+
+
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link href="../../resources/sendMessage.css" rel="stylesheet">
-<script type="text/javascript" src="../../resources/sendMessage.js"></script>
+<link href="../../resources/readMessage.css" rel="stylesheet">
+<!-- <script type="text/javascript" src="../resources/readMessage.js"></script> -->
+
+
 
 </head>
 <body>
+
 
 	<header> <nav
 		class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -33,10 +44,10 @@
 	<div class="col-sm-7">
 		<ul class="navbar-nav justify-content-center">
 			<li class="nav-item"><a class="nav-link" href="menu.jsp">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="inboxMessage.jsp">Notifications
+			<li class="nav-item"><a class="nav-link" href="godInboxMessage.jsp">Notifications
 					<span class="badge">(5)</span>
 			</a></li>
-			<li class="nav-item"><a class="nav-link" href="inboxMessage.jsp">Inbox</a></li>
+			<li class="nav-item"><a class="nav-link" href="godInboxMessage.jsp">Inbox</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
 		</ul>
 	</div>
@@ -53,106 +64,96 @@
 	</div>
 	</nav> </header>
 
+
 	<div class="container-fluid">
 
 		<div class="col-sm-12">
 			<div class="row">
 				<div class="col-md-3">
-					<br> <br> <br>
+					<br> <br>
 					<div class="inbox-menu">
 						<div class="btn-group-vertical">
-							<!-- <a href="sendMessage.html">
+							<a href="newMessage.jsp">
 								<button id="newMessage" class="btn btn-danger">New
 									Message</button>
-							</a> -->
-							<a href="inboxMessage.jsp">
+							</a> <a href="godInboxMessage.jsp">
 								<button id="inbox" class="btn btn-info">
 
 									<i class="fa fa-inbox"></i> Inbox
 
 								</button>
-							</a> <a href="sentMessage.jsp">
+							</a> <a href="sendMessage.jsp">
 								<button id="inbox" class="btn btn-info">
 
 									<i class="fa fa-rocket"></i> Sent
 
 								</button>
-							</a> <a href="trashMessage.jsp">
+							</a> <a href="sendMessage.jsp">
 								<button id="trash" class="btn btn-info">
-
 									<i class="fa fa-trash-o"></i> Trash
-
 								</button>
 							</a>
 						</div>
 					</div>
 				</div>
+
+
 				<div class="col-md-9">
-					<div class="panel-body message">
-						<br>
-						<div class="col-sm-11">
-							<h6 class="text-center">New Message</h6>
-						</div>
-						<form class="form-horizontal" role="form">
-							<div class="form-group">
-								<label for="to" class="col-sm-1 control-label">To:</label>
-								<div class="col-sm-11">
-									<input type="text" class="form-control select2-offscreen"
-										id="to" placeholder="Username">
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="subject" class="col-sm-1 control-label">Subject:</label>
-								<div class="col-sm-11">
-									<input type="text" class="form-control select2-offscreen"
-										id="subject" placeholder="Subject">
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="message" class="col-sm-1 control-label">Message:</label>
-
-								<div class="col-sm-11">
-									<textarea class="form-control select2-offscreen" id="message"
-										maxlength="250" name="body" rows="9" cols="9"
-										placeholder="Type your Message" tabindex="-1"></textarea>
-									<br> (Maximum characters: 250)<br> <span id="charLeft">
-									</span> Characters left
-								</div>
-							</div>
-							<!-- </form> -->
-
-							<div class="form-group">
-								<div class="col-sm-6">
-									<div class="btn-group ">
-										<button type="submit" class="btn btn-success">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
-										<!-- 		<button type="submit" class="btn btn-danger">Clean</button> -->
-									</div>
-								</div>
-							</div>
-						</form>
+					<br>
+					<div class="col-sm-11">
+						<h5 class="text-center">Message</h5>
 					</div>
+
+					<div class="col-sm-11">
+
+
+						<div id="messages">
+							<table>
+								<tr>
+									<td>Sender</td>
+									<td colspan="3">data</td>
+								</tr>
+								<tr>
+									<td>Receiver</td>
+									<td colspan="3">data</td>
+								</tr>
+								<tr>
+									<td>Subject</td>
+									<td colspan="3">Trying to find a solution to this
+										problem...</td>
+								</tr>
+								<tr>
+									<td>Date</td>
+									<td colspan="3">data</td>
+								</tr>
+								<tr>
+									<td>Message</td>
+									<td colspan="3">data</td>
+								</tr>
+
+							</table>
+							<div class="form-group">
+								<div class="btn-group ">
+									<button class="btn btn-success">
+										<a href="#">&nbsp;Answer&nbsp;</a>
+									</button>
+									<!-- <button class="btn btn-info">
+										<a href="#">Forward</a>
+									</button> -->
+									<button class="btn btn-danger">
+										<a href="#">Delete</a>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
 				</div>
+
 			</div>
 		</div>
 	</div>
-
-
-	<!-- <script>
-				function w3_open() {
-					document.getElementById("main").style.marginLeft = "10%";
-					document.getElementById("mySidebar").style.width = "10%";
-					document.getElementById("mySidebar").style.display = "block";
-					document.getElementById("openNav").style.display = 'none';
-				}
-				function w3_close() {
-					document.getElementById("main").style.marginLeft = "0%";
-					document.getElementById("mySidebar").style.display = "none";
-					document.getElementById("openNav").style.display = "inline-block";
-				}
-            </script> -->
-
 
 
 
@@ -183,9 +184,5 @@
 	<link href="https://select2.github.io/dist/css/select2.min.css"
 		rel="stylesheet">
 	<script src="https://select2.github.io/dist/js/select2.full.js"></script>
-	
-	 
-   
-
 </body>
 </html>
