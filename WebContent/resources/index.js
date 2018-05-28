@@ -110,6 +110,7 @@ jQuery(document).ready(function ($) {
     function validPassword() {
         // var pattern = /^\d+$/;
         // var isValid = pattern.test($('#signup-password').val());
+		//var leng=$(this).attr('#signup-password').length;
         var leng = $('#signup-password').length;
         if (leng >= 6) {
             //if (isValid) {
@@ -119,6 +120,15 @@ jQuery(document).ready(function ($) {
             $form_signup.find('input[type="password"]').next('a').toggleClass('has-error').next('span').toggleClass('is-visible');
         }
     }
+	
+	
+
+ 
+  $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
+  event.preventDefault();
+});
+</scr
+	
 
     // Check if the login fields are not empty
     $('#loginButton').on('click', (event) => {
