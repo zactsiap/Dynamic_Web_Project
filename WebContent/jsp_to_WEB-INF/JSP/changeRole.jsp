@@ -140,6 +140,7 @@
 
 								</table>
 							</div>
+							<hr>
 							<div class="col-sm-7">
 								<table>
 									<tr>
