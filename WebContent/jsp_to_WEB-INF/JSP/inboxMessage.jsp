@@ -116,7 +116,7 @@
 									<th>Day</th>
 								</tr>
 
-								<tr>
+								<tr >
 									<td><input class="myCheckbox" type="checkbox"></td>
 									<td class='clickable-row' data-href='readMessage.jsp'>Alexander
 										Pierce</td>
@@ -124,6 +124,7 @@
 										to find a solution to this problem...</td>
 									<td class='clickable-row' data-href='readMessage.jsp'>5
 										mins ago</td>
+										
 								</tr>
 							</table>
 						</div>

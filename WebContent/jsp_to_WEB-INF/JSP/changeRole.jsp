@@ -15,12 +15,22 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-<title>New Message</title>
+
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link href="../../resources/changeRole.css" rel="stylesheet">
-<script type="text/javascript" src="../../resources/changeRole.js"></script>
+<script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+<script type="text/javascript" src="js/currency-autocomplete.js"></script>
 
+
+
+
+
+<title>Change Role</title>
+
+
+<link href="../../resources/changeRole.css" rel="stylesheet">
+
+<script type="text/javascript" src="../../resources/changeRole.js"></script>
 </head>
 <body>
 
@@ -101,12 +111,12 @@
 									User:</label>
 								<div class="col-sm-11">
 									<!-- dropliste me olous tous users kai search paidio gia na pliktrologisei to onoma -->
-									<i class="fa fa-search" aria-hidden="true"></i> <input
-										id="myInput" type="text" name="search"
-										placeholder="Search Username..."> <br> <br>
+									<i class="fa fa-search" aria-hidden="true"></i>
+									 <input id="myText" type="text" placeholder="Search Username..." /> <br>
+									<br>
 
-									<table id="myTable">
-										<!-- isos to sosto einai naeinai mono ena tr k ena td -->
+									<!-- <table id="myTable">
+										isos to sosto einai naeinai mono ena tr k ena td
 										<tr>
 											<td><button type="button" class="btn btn-info"
 													value="Zac">Zac</button></td>
@@ -122,7 +132,7 @@
 													value="Charis">Charis</button></td>
 
 										</tr>
-									</table>
+									</table> -->
 								</div>
 							</div>
 							<label class="col-sm-2 control-label">Choosen User:</label> <label
@@ -144,7 +154,7 @@
 							<div class="col-sm-7">
 								<table>
 									<tr>
-										<td class="col-sm-3"><label >Delete User:</label></td>
+										<td class="col-sm-3"><label>Delete User:</label></td>
 										<td class="col-sm-2"><button class="btn btn-success">Yes</button></td>
 										<td class="col-sm-2"><button class="btn btn-danger">No</button></td>
 									</tr>
@@ -167,6 +177,7 @@
 									</span> Characters left
 								</div>
 							</div> -->
+
 
 							<!-- </form> -->
 
@@ -230,7 +241,6 @@
 	<link href="https://select2.github.io/dist/css/select2.min.css"
 		rel="stylesheet">
 	<script src="https://select2.github.io/dist/js/select2.full.js"></script>
-
 
 
 

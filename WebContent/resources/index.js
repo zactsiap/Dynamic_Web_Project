@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
         $back_to_login_link = $form_forgot_password.find('.form-bottom-message a'),
         $main_nav = $('.main-nav');
 
-    //open modal
+    // open modal
     $main_nav.on('click', function (event) {
 
         if ($(event.target).is($main_nav)) {
@@ -19,51 +19,51 @@ jQuery(document).ready(function ($) {
         } else {
             // on mobile close submenu
             $main_nav.children('ul').removeClass('is-visible');
-            //show modal layer
+            // show modal layer
             $form_modal.addClass('is-visible');
-            //show the selected form
+            // show the selected form
             ($(event.target).is('.signup')) ? signup_selected() : login_selected();
         }
 
     });
 
-    //close modal
+    // close modal
     $('.user-modal').on('click', function (event) {
         if ($(event.target).is($form_modal) || $(event.target).is('.close-form')) {
             $form_modal.removeClass('is-visible');
         }
     });
-    //close modal when clicking the esc keyboard button
+    // close modal when clicking the esc keyboard button
     $(document).keyup(function (event) {
         if (event.which == '27') {
             $form_modal.removeClass('is-visible');
         }
     });
 
-    //switch from a tab to another
+    // switch from a tab to another
     $form_modal_tab.on('click', function (event) {
         event.preventDefault();
         ($(event.target).is($tab_login)) ? login_selected() : signup_selected();
     });
 
-    //hide or show password
+    // hide or show password
     $('.hide-password').on('click', function () {
         var $this = $(this),
             $password_field = $this.prev('input');
 
         ('password' == $password_field.attr('type')) ? $password_field.attr('type', 'text') : $password_field.attr('type', 'password');
         ('Show' == $this.text()) ? $this.text('Hide') : $this.text('Show');
-        //focus and move cursor to the end of input field
+        // focus and move cursor to the end of input field
         $password_field.putCursorAtEnd();
     });
 
-    //show forgot-password form 
+    // show forgot-password form
     $forgot_password_link.on('click', function (event) {
         event.preventDefault();
         forgot_password_selected();
     });
 
-    //back to login from the forgot-password form
+    // back to login from the forgot-password form
     $back_to_login_link.on('click', function (event) {
         event.preventDefault();
         login_selected();
@@ -91,14 +91,14 @@ jQuery(document).ready(function ($) {
         $form_forgot_password.addClass('is-selected');
     }
 
-    //REMOVE THIS - it's just to show error messages 
+    // REMOVE THIS - it's just to show error messages
     // $form_login.find('input[type="submit"]').on('click', function (event) {
-    //     event.preventDefault();
-    //     $form_login.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
+    // event.preventDefault();
+    // $form_login.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
     // });
     // $form_signup.find('input[type="submit"]').on('click', function (event) {
-    //     event.preventDefault();
-    //     $form_signup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
+    // event.preventDefault();
+    // $form_signup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
     // });
 
     // Check if the password is with 6 characters on signup
@@ -110,11 +110,11 @@ jQuery(document).ready(function ($) {
     function validPassword() {
         // var pattern = /^\d+$/;
         // var isValid = pattern.test($('#signup-password').val());
-		//var leng=$(this).attr('#signup-password').length;
+		// var leng=$(this).attr('#signup-password').length;
         var leng = $('#signup-password').length;
         if (leng >= 6) {
-            //if (isValid) {
-            //$('#signup-password').css({ "border": "5px solid green" });
+            // if (isValid) {
+            // $('#signup-password').css({ "border": "5px solid green" });
             $('form[name="myform"]').submit();
         } else {
             $form_signup.find('input[type="password"]').next('a').toggleClass('has-error').next('span').toggleClass('is-visible');
@@ -127,7 +127,7 @@ jQuery(document).ready(function ($) {
   $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
   event.preventDefault();
 });
-</scr
+
 	
 
     // Check if the login fields are not empty
@@ -142,18 +142,19 @@ jQuery(document).ready(function ($) {
         if (email != "" && pass != "") {
             $('form[name="loginform"]').submit();
         } else if (email == "") {
-            //alert("Please fill the email field.");
+            // alert("Please fill the email field.");
             $form_login.find('input[type="text"]').toggleClass('has-error').next('span').toggleClass('is-visible');
         } else if (pass == "") {
-            //alert("Please fill the password field.");
+            // alert("Please fill the password field.");
             $form_login.find('input[type="password"]').next('a').toggleClass('has-error').next('span').toggleClass('is-visible');
         }
     }
 
 
 
-    //IE9 placeholder fallback
-    //credits http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html
+    // IE9 placeholder fallback
+    // credits
+	// http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html
     if (!Modernizr.input.placeholder) {
         $('[placeholder]').focus(function () {
             var input = $(this);
@@ -176,16 +177,17 @@ jQuery(document).ready(function ($) {
         });
     }
 
-});
 
 
-//credits https://css-tricks.com/snippets/jquery/move-cursor-to-end-of-textarea-or-input/
+// credits
+// https://css-tricks.com/snippets/jquery/move-cursor-to-end-of-textarea-or-input/
 jQuery.fn.putCursorAtEnd = function () {
     return this.each(function () {
         // If this function exists...
         if (this.setSelectionRange) {
             // ... then use it (Doesn't work in IE)
-            // Double the length because Opera is inconsistent about whether a carriage return is one character or two. Sigh.
+            // Double the length because Opera is inconsistent about whether a
+			// carriage return is one character or two. Sigh.
             var len = $(this).val().length * 2;
             this.setSelectionRange(len, len);
         } else {
