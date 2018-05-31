@@ -15,11 +15,18 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
-<script type="text/javascript" src="js/currency-autocomplete.js"></script>
+<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<!-- <script type="text/javascript" src="js/jquery.autocomplete.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/currency-autocomplete.js"></script>  -->
 
 
 
@@ -109,11 +116,11 @@
 							<div class="form-group">
 								<label for="to" class="col-sm-4 control-label">Choose
 									User:</label>
-								<div class="col-sm-11">
+								<div class="col-sm-11" >
 									<!-- dropliste me olous tous users kai search paidio gia na pliktrologisei to onoma -->
-									<i class="fa fa-search" aria-hidden="true"></i>
-									 <input id="myText" type="text" placeholder="Search Username..." /> <br>
-									<br>
+									<i class="fa fa-search" aria-hidden="true"></i> 
+									<input id="tags" type="text" placeholder="Search Username..." />
+									<br> <br>
 
 									<!-- <table id="myTable">
 										isos to sosto einai naeinai mono ena tr k ena td
@@ -224,9 +231,12 @@
 		</div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	<!-- 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
+		 -->
+
+
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
 		integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
@@ -235,13 +245,14 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
 		integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
 		crossorigin="anonymous"></script>
-	<link
-		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-		rel="stylesheet">
-	<link href="https://select2.github.io/dist/css/select2.min.css"
-		rel="stylesheet">
-	<script src="https://select2.github.io/dist/js/select2.full.js"></script>
 
+
+	<!-- 	<link href="https://select2.github.io/dist/css/select2.min.css"
+		rel="stylesheet"> -->
+	<!-- <script src="https://select2.github.io/dist/js/select2.full.js"></script> -->
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
 
 
 </body>

@@ -80,14 +80,13 @@
 							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
 								laboris...</p>
 						</div>
-						<div class="col-sm-5">
+						<div class="col-sm-10">
 							<h3>Grigoro menu gia anoigma lamps</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing
 								elit...</p>
 							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
 								laboris...</p>
-						</div>
-						<div class="col-sm-5">
+						
 							<h3>Lista me status apo lampes kai boiler</h3>
 							<p id="messageTest">To message prepei na emfanistei edo</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing
