@@ -81,8 +81,7 @@ button.btn {
 	color: white;
 }
 
-.inbox-menu .btn-group-vertical a  :hover,
- .inbox-menu .btn-group-vertical a .active
+.inbox-menu .btn-group-vertical a  :hover, .inbox-menu .btn-group-vertical a .active
 	{
 	color: white;
 	transition: 0.8s all;
@@ -347,6 +346,12 @@ th {
 td:first-child, th:first-child {
 	border-left: none;
 }
+tr:hover{
+	/* background-color: #5ec47e; */
+	font-weight:bold;
+	cursor: pointer;
+}
+
 
 /************************************************************************************/
 /* buttons in the end  */

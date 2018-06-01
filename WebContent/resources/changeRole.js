@@ -16,18 +16,49 @@ $(document).ready(
 			 * was " + this.value ); } });
 			 */
 
+			
 			/* autocomplete */
-			$(function() {
+			var url="http://localhost:8080/MyGOD/users";
+			$.getJSON(url, function(availableTags) {
 				var availableTags = [ "ActionScript", "AppleScript", "Asp",
 						"BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion",
 						"Erlang", "Fortran", "Groovy", "Haskell", "Java",
 						"JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby",
 						"Scala", "Scheme" ];
+				
 				$("#tags").autocomplete({
 					source : availableTags
 				});
 			});
 
+			
+			  /*$.ajax({
+			        url: "http://localhost:8080/MyGOD/users"
+			    }).then(function(availableTags) {
+			    	$("#tags").autocomplete({
+						source : availableTags
+					});
+			    });*/
+			
+			
+			$("#myTable .btn").click(function() {
+				var i = null;
+	            for (i = 0; tags.length > i; i += 1) {
+	                if (availableTags[i] != $("#tags").val()) {
+	                    alert("Name not found");
+	                }
+	            }
+				/*var posible = $("#tags").val();
+				// alert(fired_button);
+				$("#nameOfUser").text(fired_button);*/
+			});
+			
+			
+			
+			
+			
+			
+			
 			/*autocomplete from json*/
 		
 			
