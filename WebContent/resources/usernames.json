@@ -8,20 +8,16 @@
  ]
   */
  [
-  {
-    "name": "Declan Haley",
-    "code": "Cras.lorem.lorem@nonquam.ca"
-  },
-  {
-    "name": "Francis Marsh",
-    "code": "neque@arcu.edu"
-  },
-  {
-    "name": "Gage Figueroa",
-    "code": "Sed.auctor.odio@magnis.ca"
-  },
-  {
-    "name": "Asher Gay",
-    "code": "Phasellus@nonsapien.ca"
-  }
+	{
+		"name": "Declan Haley"
+	},
+	{
+		"name": "Francis Marsh"
+	},
+	{
+		"name": "Gage Figueroa"
+	},
+	{
+		"name": "Asher Gay"}
+		]
 ]

@@ -28,6 +28,9 @@ $(document).ready(
 				});
 			});
 
+			/*autocomplete from json*/
+		
+			
 			$("#myTable .btn").click(function() {
 				var fired_button = $(this).val();
 				// alert(fired_button);
